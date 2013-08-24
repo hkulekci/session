@@ -1,0 +1,4 @@
+session
+=======
+
+Light Session Class
