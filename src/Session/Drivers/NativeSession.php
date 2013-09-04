@@ -24,7 +24,7 @@ class NativeSession implements \Session\SessionInterface
         if (!headers_sent()){
             session_start();
         }else{
-            throw new Exception("Header already sent", 1);
+            throw new \Exception("Header already sent", 1);
         }
 
         $this->_id = session_id();
@@ -35,7 +35,7 @@ class NativeSession implements \Session\SessionInterface
         {
             if ($this->_agent != md5($_SERVER['HTTP_USER_AGENT']))
             {
-                throw new Exception("HTTP_USER_AGENT problem", 1);
+                throw new \Exception("HTTP_USER_AGENT problem", 1);
                 
             }
         }
